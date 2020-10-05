@@ -1,37 +1,50 @@
-// const num = "30";
-// num = num - 10;
-// num = num + 5;
-// // num = num / 2;
-// num = num % 2;
+// CONDITIONAL STATEMENTS IN JS
 
-const firstName = "Peter";
-const lastName = "Akaliro";
-const name = `My last name is ${lastName} and my first name is ${firstName}`;
+// if (condition) {
+//        // execute code
+// }
 
-console.log(name);
-// var alpha = "A B C D";
-// var num = 30;
-// var score = 2.7;
-// var isActive = false;
-// var colors = ["blue", "yellow", "red", 10, 3.9];
-// var profile = {
-//     name: "Peter Akaliro",
-//     email: "pin4eva@gmail.com",
-//     phone: "07062275085",
-//     age: null
-// };
+let name = prompt("Enter your name");
+let gender;
+let age;
 
-/*
-       JAVASCRIPT TYPES
+if (name) {
+  gender = prompt(`Hi ${name}, enter your gender`);
 
-       String
-       Number
-       Float
-       Boolean
-       Array
-       Object
-       Null
-       Undefined
+  if (gender) {
+    age = prompt("Enter age");
+    age = Number(age);
+    gender = gender.toLowerCase();
+  }
+  let greeting;
 
+  if (gender === "male") {
+    if (age > 17) {
+      greeting = `Good morning Sir!, You are welcome to drink`;
+    } else {
+      greeting = `Good morning Sir!, You are not welcome to drink`;
+    }
+  } else if (gender == "female") {
+    if (age > 17) {
+      greeting = `Good morning Ma!, You are welcome to drink`;
+    } else {
+      greeting = `Good morning Ma!, You are not welcome to drink`;
+    }
+  } else {
+    prompt("Please confirm your gender");
+  }
 
-        **/
+  alert(greeting);
+}
+
+// let age;
+
+// age = prompt("Please enter age");
+
+// if (age <= 17) {
+//   alert("Please come back when you are 18");
+// } else if (Number(age) === 18) {
+//   alert("You are just the right age");
+// } else {
+//   alert("You can drink");
+// }
